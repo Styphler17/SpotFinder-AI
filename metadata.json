@@ -1,0 +1,7 @@
+{
+  "name": "SpotFinder - AI Recommendations",
+  "description": "Your AI companion for finding the best spots, deals, and trends. Powered by Google Search grounding for real-time accuracy.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

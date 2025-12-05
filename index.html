@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SpotFinder | Your AI Recommendation Companion</title>
+    <meta name="description" content="Find the best spots, deals, and trends with SpotFinder. Powered by Gemini & Google Search Grounding.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spotfinder.ai/">
+    <meta property="og:title" content="SpotFinder | Your AI Recommendation Companion">
+    <meta property="og:description" content="Find the best spots, deals, and trends. Powered by Google Search grounding for real-time accuracy.">
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=SpotFinder&background=4f46e5&color=fff&size=512">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spotfinder.ai/">
+    <meta property="twitter:title" content="SpotFinder | Your AI Recommendation Companion">
+    <meta property="twitter:description" content="Find the best spots, deals, and trends. Powered by Google Search grounding for real-time accuracy.">
+    <meta property="twitter:image" content="https://ui-avatars.com/api/?name=SpotFinder&background=4f46e5&color=fff&size=512">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f8fafc; /* slate-50 */
+        color: #0f172a; /* slate-900 */
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      html.dark body {
+        background-color: #020617; /* slate-950 */
+        color: #f1f5f9; /* slate-100 */
+      }
+
+      /* Mobile input fix to prevent zooming */
+      input, textarea {
+        font-size: 16px !important;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+
+      @keyframes typing {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+      .animate-typing {
+        animation: typing 1.4s infinite ease-in-out both;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "recharts": "https://esm.sh/recharts@2.12.2?external=react,react-dom"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
