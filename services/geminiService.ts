@@ -1,10 +1,6 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { GroundingMetadata, Language, LocationData, ChartData } from "../types";
 
-// Initialize the client
-// NOTE: API Key is injected via process.env.API_KEY
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export interface SearchResult {
   text: string;
   groundingMetadata?: GroundingMetadata;
@@ -22,6 +18,10 @@ export const searchDeBesties = async (
   } = {}
 ): Promise<SearchResult> => {
   try {
+    // Initialize the client inside the function to prevent top-level crashes
+    // if the API key is missing on page load.
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const { useThinking, location } = options;
 
     // MODEL SELECTION
